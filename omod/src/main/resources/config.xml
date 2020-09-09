@@ -8,9 +8,9 @@
 	<name>@MODULE_NAME@</name>
 	<version>@MODULE_VERSION@</version>
 	<package>@MODULE_PACKAGE@</package>
-	<author>Chuyen Nguyen, Viet Nguyen</author>
+	<author>HealthIT</author>
 	<description>
-			Ipd
+			Ipd module for the EHR work
 	</description>
 
 	<activator>@MODULE_PACKAGE@.IpdActivator</activator>
@@ -22,7 +22,7 @@
 	<!-- <updateURL>https://dev.openmrs.org/modules/download/@MODULE_ID@/update.rdf</updateURL> -->
 	<!-- /Base Module Properties -->
 	
-	<require_version>1.6.1</require_version>
+	<require_version>1.9.8</require_version>
 	
 	<extension>
 		<point>org.openmrs.admin.list</point>

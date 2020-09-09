@@ -5,33 +5,18 @@
   <groupId>org.openmrs.module</groupId>
   <artifactId>ipd</artifactId>
   <name>Ipd module</name>
-  <version>0.10.1</version>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <description>Ipd module</description>
-  <url>http://openmrs.org</url>
+  <description>EHR Ipd module</description>
+  <url>https://healthit.uonbi.ac.ke/</url>
 
-  <scm>
-    <connection>scm:svn:http://svn.openmrs.org/openmrs-modules/mvntest/trunk/</connection>
-    <developerConnection>scm:svn:http://svn.openmrs.org/openmrs-modules/mvntest/trunk/</developerConnection>
-    <url>http://svn.openmrs.org/openmrs-modules/mvntest/trunk/</url>
-  </scm>
-
-	<distributionManagement>
-        <!-- use the following if you're not using a snapshot version. -->
-            <repository>
-                <id>shimla-nexus</id>
-                <name>Shimla nexus repo</name>
-                <url>http://hospdev.hispindia.org/nexus/content/repositories/releases/</url>
-            </repository>
-        <!-- use the following if you ARE using a snapshot version. -->
-            <snapshotRepository>
-                <id>shimla-nexus</id>
-                <name>Shimla nexus repo</name>
-                <url>http://hospdev.hispindia.org/nexus/content/repositories/snapshots/</url>
-                <uniqueVersion>false</uniqueVersion>
-             </snapshotRepository>
-     </distributionManagement>
+    <scm>
+        <connection>scm:git:https://github.com/uonafya/ipdcore.git</connection>
+        <developerConnection>scm:git:https://github.com/uonafya/ipdcore.git</developerConnection>
+        <url>https://github.com/uonafya/ipdcore.git</url>
+        <tag>HEAD</tag>
+    </scm>
      
   <dependencyManagement>
     <dependencies>
