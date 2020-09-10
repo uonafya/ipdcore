@@ -533,7 +533,7 @@ public class PatientAdmittedController {
 					opdDrugOrder.setComments(comments);
 					opdDrugOrder.setCreator(user);
 					opdDrugOrder.setCreatedOn(date);
-					opdDrugOrder.setOrderFrom(1);
+					//opdDrugOrder.setOrderFrom(1);
 					patientDashboardService
 							.saveOrUpdateOpdDrugOrder(opdDrugOrder);
 				}
@@ -910,7 +910,7 @@ public class PatientAdmittedController {
 					opdDrugOrder.setComments(comments);
 					opdDrugOrder.setCreator(user);
 					opdDrugOrder.setCreatedOn(date);
-					opdDrugOrder.setOrderFrom(2);
+					//opdDrugOrder.setOrderFrom(2);
 					patientDashboardService
 							.saveOrUpdateOpdDrugOrder(opdDrugOrder);
 				}
