@@ -72,7 +72,7 @@ public class MainController {
 		//System.out.println("=========================================================");
 		creatConceptQuestionAndAnswer(Context.getConceptService() , Context.getAuthenticatedUser() ,HospitalCoreConstants.CONCEPT_ADMISSION_OUTCOME,  new String[]{ "Improve", "Cured" , "Discharge on request" ,"LAMA", "Absconding", "Death"});
 		//	System.out.println("=====================xong====================================");
-		Concept ipdConcept = Context.getConceptService().getConceptByName(Context.getAdministrationService().getGlobalProperty(IpdConstants.PROPERTY_IPDWARD));
+		Concept ipdConcept = Context.getConceptService().getConceptByName(Context.getAdministrationService().getGlobalProperty(IpdConstants.PROPERTY_IPDWARD)); // comes from patientdashboard core module
 		List<ConceptAnswer> list = (ipdConcept!= null ?  new ArrayList<ConceptAnswer>(ipdConcept.getAnswers()) : null);
 		if(CollectionUtils.isNotEmpty(list)){
 			Collections.sort(list, new ConceptAnswerComparator());
