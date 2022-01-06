@@ -465,7 +465,7 @@ public class PatientAdmittedController {
 					obsInvestigation.setObsDatetime(encounter
 							.getEncounterDatetime());
 					obsInvestigation.setLocation(location);
-					obsInvestigation.setPatient(patient);
+					obsInvestigation.setPerson(patient);
 					Context.getObsService().saveObs(obsInvestigation,
 							"save investigation");
 				}
@@ -798,7 +798,7 @@ public class PatientAdmittedController {
 					obsDiagnosis.setObsDatetime(date);
 					obsDiagnosis.setLocation(location);
 					obsDiagnosis.setDateCreated(date);
-					obsDiagnosis.setPatient(ipdEncounter.getPatient());
+					obsDiagnosis.setPerson (ipdEncounter.getPatient ().getPerson ());
 					obsDiagnosis.setEncounter(ipdEncounter);
 					obsDiagnosis = Context.getObsService().saveObs(
 							obsDiagnosis, "update obs diagnosis if need");
@@ -828,7 +828,7 @@ public class PatientAdmittedController {
 					obsProcedure.setCreator(user);
 					obsProcedure.setObsDatetime(date);
 					obsProcedure.setLocation(location);
-					obsProcedure.setPatient(ipdEncounter.getPatient());
+					obsProcedure.setPerson (ipdEncounter.getPatient ().getPerson ());
 					obsProcedure.setDateCreated(date);
 					obsProcedure.setEncounter(ipdEncounter);
 					obsProcedure = Context.getObsService().saveObs(
@@ -917,7 +917,7 @@ public class PatientAdmittedController {
 			obs.setEncounter(ipdEncounter);
 			obs.setObsDatetime(ipdEncounter.getEncounterDatetime());
 			obs.setLocation(location);
-			obs.setPatient(ipdEncounter.getPatient());
+			obs.setPerson (ipdEncounter.getPatient().getPerson ());
 			Context.getObsService().saveObs(obs, "save other instruction");
 		}
 

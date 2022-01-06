@@ -29,16 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
-import org.openmrs.Concept;
-import org.openmrs.ConceptAnswer;
-import org.openmrs.Encounter;
-import org.openmrs.EncounterType;
-import org.openmrs.Location;
-import org.openmrs.Obs;
-import org.openmrs.PersonAddress;
-import org.openmrs.PersonAttribute;
-import org.openmrs.Role;
-import org.openmrs.User;
+import org.openmrs.*;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.hospitalcore.HospitalCoreService;
 import org.openmrs.module.hospitalcore.IpdService;
@@ -57,6 +48,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.openmrs.Person;
 
 /**
  * <p>
@@ -216,7 +208,7 @@ public class PatientAdmissionController {
 			Location location = new Location(1);
 			encounter.setPatient(admission.getPatient());
 			encounter.setCreator(user);
-			encounter.setProvider(user);
+			//encounter.setProvider(user);
 			encounter.setEncounterDatetime(date);
 			encounter.setEncounterType(encounterType);
 			encounter.setLocation(location);
@@ -357,7 +349,7 @@ public class PatientAdmissionController {
 			Location location = new Location(1);
 			encounter.setPatient(admission.getPatient());
 			encounter.setCreator(user);
-			encounter.setProvider(user);
+			//encounter.setProvider(user);
 			encounter.setEncounterDatetime(date);
 			encounter.setEncounterType(encounterType);
 			encounter.setLocation(location);

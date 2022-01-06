@@ -74,7 +74,7 @@
 
   <properties>
     <openMRSVersion>2.3.3</openMRSVersion>
-      <legacyUiVersion>1.5.0</legacyUiVersion>
+      <legacyUiVersion>1.8.2</legacyUiVersion>
   </properties>
 
   <build>
