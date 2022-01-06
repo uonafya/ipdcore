@@ -39,18 +39,7 @@ import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openmrs.Concept;
-import org.openmrs.ConceptAnswer;
-import org.openmrs.Encounter;
-import org.openmrs.GlobalProperty;
-import org.openmrs.Location;
-import org.openmrs.Obs;
-import org.openmrs.Patient;
-import org.openmrs.PersonAddress;
-import org.openmrs.PersonAttribute;
-import org.openmrs.PersonAttributeType;
-import org.openmrs.Role;
-import org.openmrs.User;
+import org.openmrs.*;
 import org.openmrs.api.AdministrationService;
 import org.openmrs.api.ConceptService;
 import org.openmrs.api.PatientService;
@@ -451,7 +440,7 @@ public class PatientAdmittedController {
 					oProcedure.setEncounter(encounter);
 					oProcedure.setObsDatetime(encounter.getEncounterDatetime());
 					oProcedure.setLocation(location);
-					oProcedure.setPatient(patient);
+					oProcedure.setPerson (new Person ());
 					Context.getObsService().saveObs(oProcedure,
 							"save procedure");
 				}
@@ -493,7 +482,7 @@ public class PatientAdmittedController {
 				obs.setEncounter(encounter);
 				obs.setObsDatetime(encounter.getEncounterDatetime());
 				obs.setLocation(location);
-				obs.setPatient(patient);
+				obs.setPerson (encounter.getPatient ());
 				Context.getObsService().saveObs(obs, "save other instruction");
 			}
 

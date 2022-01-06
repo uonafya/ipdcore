@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>ipd</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ipd-omod</artifactId>
 	<packaging>omod</packaging>
@@ -15,7 +15,7 @@
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
 			<artifactId>hospitalcore-api</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<version>1.0.7-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -23,7 +23,10 @@
 			<artifactId>ipd-api</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>legacyui-omod</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.openmrs.api</groupId>
 			<artifactId>openmrs-api</artifactId>
@@ -41,7 +44,13 @@
 			<artifactId>openmrs-test</artifactId>
 			<type>pom</type>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>hospitalcore-api</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
